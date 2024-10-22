@@ -1,8 +1,9 @@
+# Импортируемые библиотеки
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QListWidget, QListWidgetItem, QMessageBox
 from PyQt6.QtGui import QIcon, QColor
 
-
+# Класс FoodApp наследуется от класса QWidget и представляет собой основное окно приложения.
 class FoodApp(QWidget):
     def __init__(self):
         super().__init__()
@@ -44,7 +45,7 @@ class FoodApp(QWidget):
         self.food_list.itemClicked.connect(self.show_food_info)
 
         self.setLayout(self.layout)
-
+    # Метод отображает информацию о выбранном блюде при клике.
     def show_food_info(self, item):
         dish_name = item.text()
         # Здесь можно добавить логику для получения информации о блюде
