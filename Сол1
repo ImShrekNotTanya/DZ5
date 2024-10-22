@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
-from PyQt6.QtGui import QIcon, QPixmap  # Исправлен импорт
+from PyQt6.QtGui import QIcon, QPixmap 
 from PyQt6.QtCore import Qt
 
 
@@ -69,9 +69,9 @@ class ProfilePage(QWidget):
         self.label_welcome = QLabel("Добро пожаловать в личный профиль!")
         layout.addWidget(self.label_welcome)
 
-        # Добавление изображения (требуется файл profile.jpg в той же папке)
+        # Добавление изображения 
         self.image = QLabel()
-        self.pixmap = QPixmap("JPEG_example_down.jpg")  # Замените на путь к изображению
+        self.pixmap = QPixmap("JPEG_example_down.jpg")  # путь к изображению
         self.image.setPixmap(self.pixmap)
         layout.addWidget(self.image)
 
