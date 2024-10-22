@@ -1,3 +1,6 @@
+# Приложение позволяет пользователю выбрать блюдо из списка и отображает информацию о выбранном блюде.
+
+
 # Импортируемые библиотеки
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QListWidget, QListWidgetItem, QMessageBox
