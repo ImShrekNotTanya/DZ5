@@ -1,9 +1,15 @@
+# Импортируемые библиотеки
+# sys: используем для взаимодействия с интерпретатором Python.
+# PyQt6.QtWidgets: необходимые классы для создания виджетов в приложении.
+# PyQt6.QtGui: классы для работы с графикой, включая иконки и изображения.
+# PyQt6.QtCore: реализация основных функций для работы с сигналами и событиями.
+
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtCore import Qt
 
-
+#Класс LoginPage представляет собой окно для авторизации пользователей.
 class LoginPage(QWidget):
     def __init__(self):
         super().__init__()
@@ -38,7 +44,7 @@ class LoginPage(QWidget):
         self.layout.addWidget(self.submit_button)
 
         self.setLayout(self.layout)
-
+    # Обработка входа
     def handle_login(self):
         username = self.input_username.text()
         password = self.input_password.text()
@@ -54,7 +60,7 @@ class LoginPage(QWidget):
         self.profile_window.show()
         self.close()  # Закрываем окно авторизации
 
-
+# Класс ProfilePage представляет собой окно личного профиля пользователя.
 class ProfilePage(QWidget):
     def __init__(self):
         super().__init__()
@@ -77,7 +83,8 @@ class ProfilePage(QWidget):
 
         self.setLayout(layout)
 
-
+# Создается экземпляр приложения и отображается экран авторизации.
+# Используется sys.exit(app.exec()) для корректного завершения приложения.
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     login_page = LoginPage()
