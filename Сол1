@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
-from PyQt6.QtGui import QIcon, QPixmap 
+from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtCore import Qt
 
 
@@ -12,7 +12,7 @@ class LoginPage(QWidget):
         self.setWindowIcon(QIcon("images.png"))  # Иконка приложения
 
         # Установка цвета фона
-        self.setStyleSheet("background-color: #f0f8ff;")  # Цвет фона
+        self.setStyleSheet("background-color: #F08080;")  # Цвет фона
 
         # Создаем вертикальный layout
         self.layout = QVBoxLayout()
@@ -62,14 +62,14 @@ class ProfilePage(QWidget):
         self.setGeometry(100, 100, 300, 200)
 
         # Установка цвета фона
-        self.setStyleSheet("background-color: #e6f7ff;")
+        self.setStyleSheet("background-color: #FFFFE0;")
 
         layout = QVBoxLayout()
 
         self.label_welcome = QLabel("Добро пожаловать в личный профиль!")
         layout.addWidget(self.label_welcome)
 
-        # Добавление изображения 
+        # Добавление изображения
         self.image = QLabel()
         self.pixmap = QPixmap("JPEG_example_down.jpg")  # путь к изображению
         self.image.setPixmap(self.pixmap)
