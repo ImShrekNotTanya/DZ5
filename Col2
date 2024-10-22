@@ -2,12 +2,13 @@ import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QListWidget, QListWidgetItem, QMessageBox
 from PyQt6.QtGui import QIcon, QColor
 
+
 class FoodApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Приложение с едой")  # Заголовок приложения
         self.setGeometry(100, 100, 400, 300)  # Размеры и положение окна
-        self.setWindowIcon(QIcon("icon_food.png"))  # Иконка приложения
+        self.setWindowIcon(QIcon("images(1).png"))  # Иконка приложения
 
         # Установка цвета фона
         self.setStyleSheet("background-color: #fffacd;")  # Цвет фона
@@ -22,7 +23,7 @@ class FoodApp(QWidget):
 
         # Список блюд
         self.food_list = QListWidget()
-        
+
         # Добавляем блюда в список
         dishes = [
             "Паста",
@@ -31,7 +32,7 @@ class FoodApp(QWidget):
             "Суп",
             "Стейк"
         ]
-        
+
         for dish in dishes:
             item = QListWidgetItem(dish)
             item.setBackground(QColor(255, 228, 196))  # Цвет фона элемента
@@ -48,6 +49,7 @@ class FoodApp(QWidget):
         dish_name = item.text()
         # Здесь можно добавить логику для получения информации о блюде
         QMessageBox.information(self, "Информация о блюде", f"Вы выбрали: {dish_name}")
+
 
 # Запуск приложения
 if __name__ == '__main__':
